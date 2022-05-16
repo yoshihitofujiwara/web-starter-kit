@@ -111,7 +111,6 @@ module.exports = {
     // 		async: false
     // 	}
     // }),
-
     // css
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
@@ -120,6 +119,9 @@ module.exports = {
   ],
 
   devServer: {
+    host: '0.0.0.0',
+    port: 8080,
+    useLocalIp: true,
     contentBase: dist,
     open: true,
     watchContentBase: true,
